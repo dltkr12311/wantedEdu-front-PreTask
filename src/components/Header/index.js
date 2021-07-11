@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { IoIosSearch, IoIosNotificationsOutline } from "react-icons/io";
 
 import { HeaderWrap, Logo, GnbWrap, StyledLi, StyledIcons, ProfileBox } from "./styles";
-import NavigationContainer from "./nav/NavigationContainer";
+import NavView from "./Nav/NavView";
 const Header = () => {
   const el = useRef();
   const [isHover, setIstHover] = useState(false);
@@ -10,7 +10,6 @@ const Header = () => {
   const onMouseHover = () => {
     setIstHover(!isHover);
   };
-
   const handleCloseHover = (e) => {
     if (isHover && (!el.current || !el.current.contains(e.target))) setIstHover(false);
   };
@@ -29,7 +28,7 @@ const Header = () => {
         <GnbWrap>
           <StyledLi onMouseEnter={onMouseHover} onMouseLeave={onMouseHover}>
             탐색
-            {isHover && <NavigationContainer ref={el} handleCloseHover={handleCloseHover} />}
+            {isHover && <NavView ref={el} handleCloseHover={handleCloseHover} />}
           </StyledLi>
           <li>커리어 성장</li>
           <li>직군별 연봉</li>

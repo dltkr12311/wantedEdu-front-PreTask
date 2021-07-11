@@ -10,7 +10,7 @@ const ThemePage = () => {
   return (
     <div>
       <Header />
-      <StyledBorder></StyledBorder>
+      <StyledBorder />
     </div>
   );
 };

@@ -64,11 +64,11 @@ export const StyledIcons = styled.ul`
     height: 80%;
   }
 `;
+
 export const ProfileBox = styled.li`
   border-radius: 50%;
   border: 1px solid #d7d7d7;
   box-sizing: border-box;
-
   & div {
     width: 25px;
     height: 25px;
