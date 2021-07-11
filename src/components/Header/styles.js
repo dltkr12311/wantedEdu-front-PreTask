@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { BiMenuAltRight } from "react-icons/bi";
 export const HeaderWrap = styled.div`
   width: 1200px;
   margin: 0 auto;
@@ -8,12 +8,19 @@ export const HeaderWrap = styled.div`
     justify-content: space-between;
     align-items: center;
   }
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+  }
 `;
 
 export const Logo = styled.div`
   font-weight: bold;
   font-size: 1.3rem;
   cursor: pointer;
+
+  @media ${(props) => props.theme.mobile} {
+    display: none;
+  }
 `;
 
 export const GnbWrap = styled.ul`
@@ -29,6 +36,35 @@ export const GnbWrap = styled.ul`
   & > li:hover {
     border-bottom: 2px solid #dddddd;
   }
+  @media ${(props) => props.theme.mobile} {
+    & > li {
+      display: none;
+      padding: 0;
+      margin-right: 2rem;
+    }
+    & > li:nth-child(1) {
+      display: block;
+      padding-left: 1rem;
+    }
+    & > li:nth-child(2) {
+      display: block;
+    }
+    & > li:nth-child(3) {
+      display: block;
+      margin-right: 0;
+    }
+  }
+`;
+
+export const HomeLi = styled.li`
+  display: none;
+  @media ${(props) => props.theme.mobile} {
+    display: block;
+  }
+`;
+
+export const SearchLi = styled.li`
+  border-bottom: 2px solid #258bf7;
 `;
 
 export const StyledIcons = styled.ul`
@@ -63,6 +99,12 @@ export const StyledIcons = styled.ul`
     width: 1px;
     height: 80%;
   }
+
+  @media ${(props) => props.theme.mobile} {
+    & > li:last-child {
+      display: none;
+    }
+  }
 `;
 
 export const ProfileBox = styled.li`
@@ -78,8 +120,17 @@ export const ProfileBox = styled.li`
     width: 25px;
     height: 25px;
   }
+  @media ${(props) => props.theme.mobile} {
+    display: none;
+  }
 `;
 
-export const StyledLi = styled.li`
-  border-bottom: 2px solid #258bf7;
+export const MobileMenu = styled(BiMenuAltRight)`
+  display: none;
+  @media ${(props) => props.theme.mobile} {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding-right: 1rem;
+  }
 `;

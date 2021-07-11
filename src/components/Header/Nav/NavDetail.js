@@ -31,6 +31,9 @@ const NavCategory = styled.div`
   & > div:last-child {
     padding: 0;
   }
+  @media ${(props) => props.theme.mobile} {
+    display: none;
+  }
 `;
 
 const NavDetail = () => {

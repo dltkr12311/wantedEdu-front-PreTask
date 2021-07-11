@@ -13,6 +13,9 @@ export const NavWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media ${(props) => props.theme.mobile} {
+    display: none;
+  }
 `;
 
 const NavView = ({ handleCloseHover }) => {
