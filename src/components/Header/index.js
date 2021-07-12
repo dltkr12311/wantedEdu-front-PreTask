@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { IoIosSearch, IoIosNotificationsOutline, IoIosMenu } from "react-icons/io";
+import { IoIosSearch, IoIosNotificationsOutline } from "react-icons/io";
 
 import {
   HeaderWrap,

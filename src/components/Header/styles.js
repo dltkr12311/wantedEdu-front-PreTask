@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { BiMenuAltRight } from "react-icons/bi";
+
 export const HeaderWrap = styled.div`
-  width: 1200px;
+  width: 70%;
   margin: 0 auto;
   & nav {
     display: flex;
@@ -24,19 +25,25 @@ export const Logo = styled.div`
 `;
 
 export const GnbWrap = styled.ul`
+  width: 60%;
   display: flex;
-  height: 100%;
+  justify-content: space-evenly;
+  white-space: nowrap;
   & li {
-    text-align: center;
     font-weight: bold;
     cursor: pointer;
+
+    font-size: 0.9rem;
     line-height: 50px;
-    padding: 0 1.5rem;
+  }
+  & > li:nth-child(1) {
+    padding-left: 1rem;
   }
   & > li:hover {
     border-bottom: 2px solid #dddddd;
   }
   @media ${(props) => props.theme.mobile} {
+    justify-content: flex-start;
     & > li {
       display: none;
       padding: 0;
@@ -81,6 +88,7 @@ export const StyledIcons = styled.ul`
   & > li:last-child {
     position: relative;
     border: 1px solid #d7d7d7;
+    white-space: nowrap;
     color: #333;
     padding: 0.5rem 0.8rem;
     border-radius: 20px;

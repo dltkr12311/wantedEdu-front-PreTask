@@ -18,7 +18,7 @@ const NavContentWrap = styled.div`
 `;
 
 const NavCategory = styled.div`
-  width: 1200px;
+  width: 70%;
   padding-top: 2rem;
   margin: 0 auto;
   display: flex;
