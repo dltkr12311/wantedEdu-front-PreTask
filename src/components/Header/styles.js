@@ -76,8 +76,9 @@ export const SearchLi = styled.li`
 
 export const StyledIcons = styled.ul`
   display: flex;
-  height: 100%;
   align-items: center;
+  //border: 1px solid red;
+
   & > li {
     margin-left: 1rem;
     cursor: pointer;
@@ -133,12 +134,21 @@ export const ProfileBox = styled.li`
   }
 `;
 
-export const MobileMenu = styled(BiMenuAltRight)`
+export const MobuleMenuLi = styled.li`
   display: none;
+
   @media ${(props) => props.theme.mobile} {
     display: block;
     width: 30px;
     height: 30px;
     padding-right: 1rem;
+  }
+`;
+
+export const MobileMenu = styled(BiMenuAltRight)`
+  @media ${(props) => props.theme.mobile} {
+    display: block;
+    width: 30px;
+    height: 30px;
   }
 `;
