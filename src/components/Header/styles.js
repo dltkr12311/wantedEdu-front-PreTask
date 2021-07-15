@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { IoIosNotificationsOutline } from "react-icons/io";
 import { BiMenuAltRight } from "react-icons/bi";
 
 export const HeaderWrap = styled.div`
@@ -77,8 +78,6 @@ export const SearchLi = styled.li`
 export const StyledIcons = styled.ul`
   display: flex;
   align-items: center;
-  //border: 1px solid red;
-
   & > li {
     margin-left: 1rem;
     cursor: pointer;
@@ -116,10 +115,55 @@ export const StyledIcons = styled.ul`
   }
 `;
 
+export const NotiLi = styled.li`
+  position: relative;
+  &::after {
+    position: absolute;
+    display: block;
+    content: "N";
+    left: 50%;
+    right: 0;
+    top: -50%;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    transform: translate(20%, 50%);
+    background-color: #3c6af5;
+    text-align: center;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.5rem;
+    font-weight: bold;
+    line-height: 16px;
+  }
+`;
+
+export const NotiIcon = styled(IoIosNotificationsOutline)``;
+
 export const ProfileBox = styled.li`
   border-radius: 50%;
   border: 1px solid #d7d7d7;
   box-sizing: border-box;
+  position: relative;
+  &::after {
+    position: absolute;
+    display: block;
+    content: "N";
+    left: 50%;
+    right: 0;
+    top: -50%;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    transform: translate(20%, 30%);
+    background-color: #3c6af5;
+    text-align: center;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.5rem;
+    font-weight: bold;
+    line-height: 16px;
+  }
   & div {
     width: 25px;
     height: 25px;
@@ -134,7 +178,7 @@ export const ProfileBox = styled.li`
   }
 `;
 
-export const MobuleMenuLi = styled.li`
+export const MobileMenuLi = styled.li`
   display: none;
 
   @media ${(props) => props.theme.mobile} {

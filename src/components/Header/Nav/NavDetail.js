@@ -13,8 +13,9 @@ const NavContentWrap = styled.div`
   background-color: #fff;
   display: flex;
   justify-content: flex-start;
-  opacity: 1;
-  transition: 0.5s;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: ${(props) => props.opacity};
 `;
 
 const NavCategory = styled.div`
@@ -36,9 +37,9 @@ const NavCategory = styled.div`
   }
 `;
 
-const NavDetail = () => {
+const NavDetail = ({ opa }) => {
   return (
-    <NavContentWrap>
+    <NavContentWrap opacity={opa}>
       <NavCategory>
         <NavDetailList />
         <NavDetailMore />

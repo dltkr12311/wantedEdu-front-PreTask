@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import NavDetail from "./NavDetail";
@@ -19,10 +19,11 @@ export const NavWrap = styled.div`
 `;
 
 const NavView = ({ handleCloseHover }) => {
+  const [opacity, setOpacity] = useState(1);
   return (
     <>
       <NavWrap onMouseEnter={handleCloseHover} />
-      <NavDetail />
+      <NavDetail opa={opacity} onMouseLeave={() => setOpacity(1)} />
     </>
   );
 };
